@@ -19,6 +19,9 @@ Hot Planet
 What upping the chaos level does
 ![](chaoslevel.png)
 
+Github demo page 
+https://gaberobinson-barr.github.io/github.io-566hw1-noisy-planets/
+
 ## GUI Controls
 - The shader for this homework is the default "noisyplanet"
 - enableTime turns the time attribute on or off
