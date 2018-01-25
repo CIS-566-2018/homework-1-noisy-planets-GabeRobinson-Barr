@@ -7,7 +7,7 @@ For my planet features I used almost exclusively Perlin Noise. I had tried to ge
 
 I have 2 color schemes, the first one was a very basic "planet" where different heights are different colors. I mainly used this one for testing my noise functions since its pretty easy to see the deformation. The second one is meant to be a sort of hot planet or a star, where the inner "core" is a bright white, and the outside glows orange with spouts coming off the surface while patches of "cooler areas" flow over the planet. All of the colors in this scheme except the cool spots were based on a combination of the bump, bubble and ripple heights from the vert shader, and adding colors together based on their respective heights. The cool areas were done by passing a perlin noise value to the frag shader and using it to darken the spot depending on the other height values. Both use lambert shading with a light direction that changes over time simulating a day/night. This day/night is easiest to see with the basic color scheme.
 
-I'm not entirely sure it looks that good and I may have forgotten to look at the instructions often enough to follow them all to be perfectly honest, but I like how it ended up looking.
+I'm not entirely sure it looks that good and I may have forgotten to look at the instructions often enough to really understand what I was supposed to be going for to be perfectly honest, but I like how it ended up looking.
 
 Basic Planet
 ![](basicplanet.png)
