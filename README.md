@@ -1,5 +1,33 @@
 # CIS 566 Project 1: Noisy Planets
 
+## Gabriel Robinson-Barr - grobi
+I used the slides and the webgl resource given for help.
+
+	For my planet features I used almost exclusively Perlin Noise. I had tried to get other noise functions working but for some reason couldn't get them to look nice, so I stuck with perlin noise. I messed around with input values and modifiers like time, or multiplying the inputs by noise. The "bumps" are very basic perlin noise, the "bubbles" were created by only including noise if it was higher than a specific value and multiplying it by again by perlin noise. The "ripples" were created by using previously calculated perlin noise as part of the input to the perlin noise function.
+
+	I have 2 color schemes, the first one was a very basic "planet" where different heights are different colors. I mainly used this one for testing my noise functions since its pretty easy to see the deformation. The second one is meant to be a sort of hot planet or a star, where the inner "core" is a bright white, and the outside glows orange with spouts coming off the surface while patches of "cooler areas" flow over the planet. All of the colors in this scheme except the cool spots were based on a combination of the bump, bubble and ripple heights from the vert shader, and adding colors together based on their respective heights. The cool areas were done by passing a perlin noise value to the frag shader and using it to darken the spot depending on the other height values. Both use lambert shading with a light direction that changes over time simulating a day/night. This day/night is easiest to see with the basic color scheme.
+
+I'm not entirely sure it looks that good and I may have forgotten to look at the instructions often enough to follow them all to be perfectly honest, but I like how it ended up looking.
+
+Basic Planet
+![](basicplanet.png)
+
+Hot Planet
+![](hotplanet1.png)
+![](hotplanet2.png)
+
+What upping the chaos level does
+![](chaoslevel.png)
+
+## GUI Controls
+- The shader for this homework is the default "noisyplanet"
+- enableTime turns the time attribute on or off
+- speed changes how fast the topology changes
+- chaos level shrinks the tile size of the Perlin Noise function
+- The last 4 sliders change the noise attributes they are pretty self explanatory and fairly easy to notice the difference at higher values
+- swapcolors will swap the color scheme from the hot planet to the basic scheme I used to test
+
+
 ## Objective
 - Continue practicing WebGL and Typescript
 - Experiment with noise functions to procedurally generate the surface of a planet
